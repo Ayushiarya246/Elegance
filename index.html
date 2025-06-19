@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <img
+            src="https://cdn.builder.io/api/v1/assets/52a36c13cc6d4e0db9312f19e5727fa6/screenshot-2025-06-19-150519-62285e?format=webp&width=800"
+            alt="Elegance"
+            class="nav-logo"
+          />
+        </div>
+
+        <div class="nav-center" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-dropdown">
+              <a href="#" class="nav-link">Categories</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Lipsticks</a>
+                <a href="#" class="dropdown-item">Sunscreen</a>
+                <a href="#" class="dropdown-item">Moisturizers</a>
+                <a href="#" class="dropdown-item">Foundation</a>
+                <a href="#" class="dropdown-item">Skincare</a>
+              </div>
+            </li>
+            <li class="nav-dropdown">
+              <a href="#" class="nav-link">Brands</a>
+              <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">MAC</a>
+                <a href="#" class="dropdown-item">Nykaa</a>
+                <a href="#" class="dropdown-item">Lakme</a>
+                <a href="#" class="dropdown-item">Maybelline</a>
+                <a href="#" class="dropdown-item">L'Oreal</a>
+              </div>
+            </li>
+            <li><a href="#" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-right">
+          <div class="nav-actions">
+            <button class="search-btn" aria-label="Search">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+            <button class="cart-btn" aria-label="Shopping Cart">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17M17 13v4a2 2 0 01-2 2H9a2 2 0 01-2-2v-4m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"
+                ></path>
+              </svg>
+              <span class="cart-count">0</span>
+            </button>
+            <i class="fa-solid fa-toggle-off" id="darkModeToggle" style="cursor:pointer;"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <!-- Background decorative elements -->
+      <div class="background-overlay">
+        <div class="bg-blur bg-blur-1"></div>
+        <div class="bg-blur bg-blur-2"></div>
+        <div class="bg-blur bg-blur-3"></div>
+      </div>
+
+      <!-- Main content -->
+      <div class="main-content">
+        <div class="content-wrapper">
+          <h1 class="main-heading">
+            <span class="heading-line">Dive into the</span>
+            <span class="heading-gradient">elegance</span>
+            <span class="heading-explore">
+              Explore
+              <span class="product-text lipstick-text" id="lipstick"
+                >lipsticks</span
+              >,
+              <span class="product-text sunscreen-text" id="sunscreen"
+                >sunscreen</span
+              >,
+              <span class="product-text moisturizer-text" id="moisturizer"
+                >moisturizer</span
+              >
+              and many more.....
+            </span>
+          </h1>
+
+          <p class="description">
+            Discover premium beauty products crafted with care and designed to
+            enhance your natural radiance. Experience luxury that feels as good
+            as it looks.
+          </p>
+
+          <div class="button-group">
+            <button class="btn btn-primary">Shop Collection</button>
+            <button class="btn btn-secondary">Learn More</button>
+          </div>
+        </div>
+
+        <!-- Floating decorative elements -->
+        <div class="floating-element float-1"></div>
+        <div class="floating-element float-2"></div>
+        <div class="floating-element float-3"></div>
+      </div>
+
+      <!-- Product card containers -->
+      <div id="lipstick-cards" class="product-cards-container"></div>
+      <div id="sunscreen-cards" class="product-cards-container"></div>
+      <div id="moisturizer-cards" class="product-cards-container"></div>
+
+      <!-- Interactive overlay -->
+      <div id="interactive-overlay" class="interactive-overlay"></div>
+    </div>
+    <section class="category-section" id="categorySection">
+      <div class="category-container">
+        <div class="category-header">
+          <h2 class="category-title">Explore Our Categories</h2>
+          <p class="category-subtitle">
+            Discover premium beauty products tailored to your needs
+          </p>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="category-tabs">
+          <button class="category-tab active" data-category="lipsticks">
+            💄 Lipsticks
+          </button>
+          <button class="category-tab" data-category="sunscreen">
+            ☀ Sunscreen
+          </button>
+          <button class="category-tab" data-category="moisturizer">
+            💧 Moisturizers
+          </button>
+          <button class="category-tab" data-category="foundation">
+            🎨 Foundation
+          </button>
+          <button class="category-tab" data-category="skincare">
+            🌿 Skincare
+          </button>
+        </div>
+
+        <!-- Carousel Container -->
+        <div class="carousel-container">
+          <button class="carousel-btn carousel-prev" id="carouselPrev">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+              <!-- Product cards will be dynamically inserted here -->
+            </div>
+          </div>
+
+          <button class="carousel-btn carousel-next" id="carouselNext">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="m9 18 6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators" id="carouselIndicators">
+          <!-- Dots will be dynamically generated -->
+        </div>
+      </div>
+    </section>
+    <section class="coupon-section" id="couponSection">
+      <div class="coupon-background">
+        <!-- Parallax background elements -->
+        <div class="parallax-element parallax-1"></div>
+        <div class="parallax-element parallax-2"></div>
+        <div class="parallax-element parallax-3"></div>
+        <div class="parallax-element parallax-4"></div>
+
+        <!-- Floating particles -->
+        <div class="floating-particles">
+          <div class="particle particle-1">💄</div>
+          <div class="particle particle-2">✨</div>
+          <div class="particle particle-3">💋</div>
+          <div class="particle particle-4">🌟</div>
+          <div class="particle particle-5">💄</div>
+          <div class="particle particle-6">✨</div>
+        </div>
+      </div>
+
+      <div class="coupon-container">
+        <div class="coupon-content">
+          <div class="coupon-header">
+            <div class="coupon-badge">NEW CUSTOMER SPECIAL</div>
+            <h2 class="coupon-title">Make Your First Purchase</h2>
+            <p class="coupon-subtitle">
+              Welcome to Elegance! Get exclusive discount on your first order
+            </p>
+          </div>
+
+          <div class="coupon-card">
+            <div class="coupon-top">
+              <div class="coupon-discount">
+                <span class="discount-number">25</span>
+                <span class="discount-symbol">%</span>
+                <span class="discount-text">OFF</span>
+              </div>
+              <div class="coupon-details">
+                <h3 class="coupon-offer">First Purchase Discount</h3>
+                <p class="coupon-description">
+                  Valid on minimum purchase of ₹999
+                </p>
+                <div class="coupon-code-container">
+                  <span class="coupon-code-label">Coupon Code:</span>
+                  <div class="coupon-code-box">
+                    <span class="coupon-code" id="couponCode">WELCOME25</span>
+                    <button class="copy-btn ripple-btn" id="copyBtn">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect
+                          width="14"
+                          height="14"
+                          x="8"
+                          y="8"
+                          rx="2"
+                          ry="2"
+                        />
+                        <path
+                          d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="coupon-cta">
+              <button class="shop-now-btn ripple-btn" id="shopNowBtn">
+                <span>Shop Now & Save</span>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="coupon-features">
+            <div class="feature-item">
+              <div class="feature-icon">🚚</div>
+              <span>Free Shipping</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">↩</div>
+              <span>Easy Returns</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🎁</div>
+              <span>Free Samples</span>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">⚡</div>
+              <span>Same Day Delivery</span>
+            </div>
+          </div>
+
+          <div class="coupon-terms">
+            <p>
+              *Valid for new customers only. Cannot be combined with other
+              offers. Expires in
+              <span class="countdown" id="countdown">7 days</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
